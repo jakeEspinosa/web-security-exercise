@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./html-injection.js"></script>
     <title>HTML Injection</title>
 </head>
 <body>
   <h1>HTML Injection - Broken</h1>
   <form>
-    <label for="fname">First name:</label>
-    <input type="text" id="fname" name="fname"><br><br>
-    <label for="lname">Last name:</label>
-    <input type="text" id="lname" name="lname"><br><br>
-    <input type="submit" value="Submit">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <br />
+    <br />
+    <button type="button" onClick="alertName()">Submit Name</button>
   </form> 
 </body>
 </html>
