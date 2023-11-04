@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Injection Explanation</title>
+</head>
+<body>
+  <h1>HTML Injection Explanation</h1>
+  <p>
+    HTML injection occurs when a website dynamically renders user input without sanitizing it. While not a serious <br />
+    vulnerability, HTML injection allows the adversary to modify the webpage and potentially expose session cookies or <br />
+    other sensitive information.
+  </p>
+
+  <h2>Remediation</h2>
+  <p>
+    On line 4 of html-injection-answer.js, instead of changing the innerHtml property, we change the textContent property. <br />
+    The textContent property is not parsed as HTML, so its value is displayed as text instead of raw HTML. We could also <br />
+    strip the HTML tags from the user input, but using the textContent property to dynamically render HTML is easier.
+  </p>
+
+  <h3>Insecure Code</h3>
+  <code>
+    <pre>
+      const displayName = () => {
+        const inputElValue = document.getElementById("name").value;
+        const nameDisplayEl = document.getElementById("name-display");
+        nameDisplayEl.innerHtml = "hi, " + inputElValue;
+      };
+    </pre>
+  </code>
+
+  <h3>Secure Code</h3>
+  <code>
+    <pre>
+      const displayName = () => {
+        const inputElValue = document.getElementById("name").value;
+        const nameDisplayEl = document.getElementById("name-display");
+        nameDisplayEl.textContent = "hi, " + inputElValue;
+      };
+    </pre>
+  </code>
+</body>
+</html>
