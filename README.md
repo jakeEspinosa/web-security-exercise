@@ -16,3 +16,8 @@
 <ul>
   <li>npm</li>
 </ul>
+
+<h2>Current Exercises</h2>
+<ul>
+  <li>HTML Injection</li>
+</ul>
