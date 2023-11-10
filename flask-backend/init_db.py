@@ -17,7 +17,5 @@ cur.execute("INSERT INTO users (username, password) VALUES (?, ?)",
             (USERNAME, password_hash)
             )
 
-print(password_hash)
-
 connection.commit()
 connection.close()
