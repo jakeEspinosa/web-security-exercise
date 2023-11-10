@@ -1,7 +1,7 @@
 import sqlite3
 import hashlib
 
-connection = sqlite3.connect('database.db')
+connection = sqlite3.connect('database.sqlite')
 
 USERNAME = 'jake'
 PASSWORD = 'football'
