@@ -15,6 +15,7 @@
 <h2>Dependencies</h2>
 <ul>
   <li>npm</li>
+  <li>Python 3</li>
 </ul>
 
 <h2>Current Exercises</h2>
